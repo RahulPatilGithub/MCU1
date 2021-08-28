@@ -1,0 +1,13 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+activeLaunchTarget=null\:---
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World_SemiHosting Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32f4xx_drivers,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BxCAN
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BxCAN/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BxCAN/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32f4xx_drivers/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32f4xx_drivers/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:Hello_World_SemiHosting\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

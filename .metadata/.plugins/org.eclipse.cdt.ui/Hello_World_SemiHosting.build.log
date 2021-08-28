@@ -1,0 +1,22 @@
+17:09:46 **** Build of configuration Debug for project Hello_World_SemiHosting ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Hello_World_SemiHosting.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Course_ARM_Cortex_MX\MCU1_Course\MCU1\Hello_World_SemiHosting\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hello_World_SemiHosting.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hello_World_SemiHosting.elf
+ 
+arm-none-eabi-size   Hello_World_SemiHosting.elf 
+arm-none-eabi-objdump -h -S  Hello_World_SemiHosting.elf  > "Hello_World_SemiHosting.list"
+arm-none-eabi-objcopy  -O binary  Hello_World_SemiHosting.elf  "Hello_World_SemiHosting.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4808	    116	   1764	   6688	   1a20	Hello_World_SemiHosting.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hello_World_SemiHosting.list
+ 
+Finished building: Hello_World_SemiHosting.bin
+ 
+
+17:09:47 Build Finished. 0 errors, 0 warnings. (took 855ms)
+

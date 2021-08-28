@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stm32f446xx.h": "c",
+        "gpio_driver.h": "c",
+        "gpio.h": "c",
+        "syscfg.h": "c",
+        "exti.h": "c",
+        "rcc.h": "c"
+    }
+}

@@ -1,0 +1,16 @@
+19:23:57 **** Incremental Build of configuration Debug for project stm32f4xx_drivers ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/003Extern_Led_Btn_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I"D:/Course_ARM_Cortex_MX/MCU1_Course/MCU1/stm32f4xx_drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/003Extern_Led_Btn_main.d" -MT"Src/003Extern_Led_Btn_main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/003Extern_Led_Btn_main.o"
+arm-none-eabi-gcc "../Drivers/Src/gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I"D:/Course_ARM_Cortex_MX/MCU1_Course/MCU1/stm32f4xx_drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/Src/gpio_driver.d" -MT"Drivers/Src/gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/gpio_driver.o"
+../Drivers/Src/gpio_driver.c: In function 'GPIO_IRQPriorityConfig':
+../Drivers/Src/gpio_driver.c:394:4: error: 'NVIC_IPR' undeclared (first use in this function); did you mean 'NVIC_ICER0'?
+  394 |  *(NVIC_IPR + (IPRx * 4)) |= (IRQPriority << (8 * Section));
+      |    ^~~~~~~~
+      |    NVIC_ICER0
+../Drivers/Src/gpio_driver.c:394:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Drivers/Src/subdir.mk:19: Drivers/Src/gpio_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+19:23:57 Build Failed. 3 errors, 0 warnings. (took 283ms)
+
